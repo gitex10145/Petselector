@@ -15,14 +15,14 @@ public class Main {
         String season = "";
         String name = "";
 
-        System.out.print("Favorite color? (red/blue/green): ");
+        System.out.print("Favorite color? red blue green: ");
         color = sc.nextLine().trim().toLowerCase();
         if (!(color.equals("red") || color.equals("blue") || color.equals("green"))) {
             System.out.println("I only know red blue or green so blue.");
             color = "blue";
         }
 
-        System.out.print("Favorite season? (winter/spring/summer/fall): ");
+        System.out.print("Favorite season? winter spring summer fall: ");
         season = sc.nextLine().trim().toLowerCase();
         if (!(season.equals("winter") || season.equals("spring") || season.equals("summer") || season.equals("fall"))) {
             System.out.println("Not valid, summer then.");
