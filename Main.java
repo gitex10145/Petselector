@@ -11,8 +11,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Let's figure out your perfect pet.");
-
         String color = "";
         String season = "";
         String name = "";
@@ -20,32 +18,26 @@ public class Main {
         System.out.print("Favorite color? (red/blue/green): ");
         color = sc.nextLine().trim().toLowerCase();
         if (!(color.equals("red") || color.equals("blue") || color.equals("green"))) {
-            System.out.println("I only know red, blue, or green, so I'll just go with blue.");
+            System.out.println("I only know red blue or green so blue.");
             color = "blue";
         }
 
-        System.out.print("What's your favorite season? (winter/spring/summer/fall): ");
+        System.out.print("Favorite season? (winter/spring/summer/fall): ");
         season = sc.nextLine().trim().toLowerCase();
         if (!(season.equals("winter") || season.equals("spring") || season.equals("summer") || season.equals("fall"))) {
-            System.out.println("That one doesn't count, so let's say summer.");
+            System.out.println("Not valid, summer then.");
             season = "summer";
         }
 
-        System.out.print("And your first name? ");
+        System.out.print("Your name? ");
         name = sc.nextLine().trim();
         if (name.length() == 0) {
-            System.out.println("You didn't type anything, so I'll call you Sam.");
+            System.out.println("No name, Sam.");
             name = "Sam";
         }
 
         char firstLetter = Character.toLowerCase(name.charAt(0));
         boolean startsWithVowel = "aeiou".indexOf(firstLetter) >= 0;
-
-        System.out.print("Crunching the pet data");
-        for (int i = 0; i < 3; i++) {
-            System.out.print(".");
-        }
-        System.out.println();
 
         String pet = "";
 
