@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 /*
  * Danilo Vranic
- * period 2
- * pet game
+ * period 3
+ * petselector
  */
 
 public class Main {
@@ -14,28 +14,31 @@ public class Main {
         String season = "";
         String name = "";
 
-        System.out.print("Favorite color? red blue green: ");
-        color = sc.nextLine().trim().toLowerCase();
-        if (!(color.equals("red") || color.equals("blue") || color.equals("green"))) {
-            // just use blue if bad input
-            System.out.println("bad color, blue.");
-            color = "blue";
+        while (true) {
+            System.out.print("Favorite color? red blue green: ");
+            color = sc.nextLine().trim().toLowerCase();
+            if (color.equals("red") || color.equals("blue") || color.equals("green")) {
+                break;
+            }
+            System.out.println("spelling error.");
         }
 
-        System.out.print("Favorite season? winter spring summer fall: ");
-        season = sc.nextLine().trim().toLowerCase();
-        if (!(season.equals("winter") || season.equals("spring") || season.equals("summer") || season.equals("fall"))) {
-            // pick summer if they type wrong thing
-            System.out.println("bad season, summer.");
-            season = "summer";
+        while (true) {
+            System.out.print("Favorite season? winter spring summer fall: ");
+            season = sc.nextLine().trim().toLowerCase();
+            if (season.equals("winter") || season.equals("spring") || season.equals("summer") || season.equals("fall")) {
+                break;
+            }
+            System.out.println("spelling error.");
         }
 
-        System.out.print("Your name? ");
-        name = sc.nextLine().trim();
-        if (name.length() == 0) {
-            // if no name, just use Sam
-            System.out.println("No name, Sam.");
-            name = "Sam";
+        while (true) {
+            System.out.print("Your name? ");
+            name = sc.nextLine().trim();
+            if (name.length() > 0) {
+                break;
+            }
+            System.out.println("spelling error.");
         }
 
         char firstLetter = Character.toLowerCase(name.charAt(0));
