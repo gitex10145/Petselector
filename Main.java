@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
 /*
- * Name: Danilo Vranic
- * Period: 2
- * Description: Finds your perfect pet based on your favorite color, season,
- * and the first letter of your name.
+ * Danilo Vranic
+ * period 2
+ * pet game
  */
 
 public class Main {
@@ -18,6 +17,7 @@ public class Main {
         System.out.print("Favorite color? red blue green: ");
         color = sc.nextLine().trim().toLowerCase();
         if (!(color.equals("red") || color.equals("blue") || color.equals("green"))) {
+            // just use blue if bad input
             System.out.println("I only know red blue or green so blue.");
             color = "blue";
         }
@@ -25,6 +25,7 @@ public class Main {
         System.out.print("Favorite season? winter spring summer fall: ");
         season = sc.nextLine().trim().toLowerCase();
         if (!(season.equals("winter") || season.equals("spring") || season.equals("summer") || season.equals("fall"))) {
+            // pick summer if they type wrong thing
             System.out.println("Not valid, summer then.");
             season = "summer";
         }
@@ -32,6 +33,7 @@ public class Main {
         System.out.print("Your name? ");
         name = sc.nextLine().trim();
         if (name.length() == 0) {
+            // if no name, just use Sam
             System.out.println("No name, Sam.");
             name = "Sam";
         }
@@ -42,6 +44,7 @@ public class Main {
         String pet = "";
 
         if (color.equals("blue")) {
+            // blue stuff
             if (season.equals("fall")) {
                 pet = "Alligator";
             } else if (season.equals("spring")) {
@@ -52,6 +55,7 @@ public class Main {
         }
 
         if (color.equals("green")) {
+            // green pet stuff
             if (!startsWithVowel && season.equals("winter")) {
                 pet = "Giraffe";
             } else if (!season.equals("fall")) {
@@ -60,6 +64,7 @@ public class Main {
         }
 
         if (color.equals("red")) {
+            // red pet
             if (startsWithVowel) {
                 pet = "Porcupine";
             } else {
@@ -68,10 +73,12 @@ public class Main {
         }
 
         if (season.equals("summer")) {
+            // summer makes pony
             pet = "Pony";
         }
 
         if (pet.equals("")) {
+            // default pet
             pet = "Pet rock";
         }
 
