@@ -18,7 +18,7 @@ public class Main {
         color = sc.nextLine().trim().toLowerCase();
         if (!(color.equals("red") || color.equals("blue") || color.equals("green"))) {
             // just use blue if bad input
-            System.out.println("I only know red blue or green so blue.");
+            System.out.println("bad color, blue.");
             color = "blue";
         }
 
@@ -26,7 +26,7 @@ public class Main {
         season = sc.nextLine().trim().toLowerCase();
         if (!(season.equals("winter") || season.equals("spring") || season.equals("summer") || season.equals("fall"))) {
             // pick summer if they type wrong thing
-            System.out.println("Not valid, summer then.");
+            System.out.println("bad season, summer.");
             season = "summer";
         }
 
