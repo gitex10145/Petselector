@@ -83,8 +83,7 @@ public class Main {
             pet = "Pet rock";
         }
 
-        System.out.println("Well, " + name + ", your perfect pet is: " + pet + "!");
-        System.out.println("(If you don't like it, blame the universe and not the code.)");
+        System.out.println("Your perfect pet is: " + pet);
 
         sc.close();
     }
